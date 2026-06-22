@@ -1,0 +1,5 @@
+export const SPRINT_STATUSES = {
+  PLANNED:   "PLANNED",
+  ACTIVE:    "ACTIVE",
+  COMPLETED: "COMPLETED",
+};
