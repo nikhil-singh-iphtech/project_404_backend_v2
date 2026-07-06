@@ -63,7 +63,9 @@ authRouter.post("/register", authLimiter, validate(registerSchema), authControll
 authRouter.post("/login",    authLimiter, validate(loginSchema),    authController.login);
 
 // ─── OTP / Passwordless ───────────────────────────────────────
-authRouter.post("/otp/send",   otpLimiter,  validate(sendOtpSchema),   authController.sendOtp);
+// authRouter.post("/otp/send",   otpLimiter,  validate(sendOtpSchema),   authController.sendOtp);
+authRouter.post("/otp/send",  validate(sendOtpSchema),   authController.sendOtp);
+// authRouter.post("/otp/verify", authLimiter, validate(verifyOtpSchema), authController.verifyOtp);
 authRouter.post("/otp/verify", authLimiter, validate(verifyOtpSchema), authController.verifyOtp);
 
 // ─── Google OAuth ──────────────────────────────────────────────

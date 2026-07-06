@@ -48,7 +48,7 @@ app.use(mongoSanitizeMiddleware);
 
 // CORS — only allow our frontend origin
 app.use(cors({
-  origin: config.CLIENT_URL,
+  origin: config.CLIENT_URL  ,
   credentials: true,
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
 }));
